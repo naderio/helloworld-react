@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "target": "default",
+    "public": "build",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+.container {
+  padding: var(--theme-spacing-1);
+}
+
+.container > * {
+  margin: var(--theme-spacing-1);
+}
+
+.container img {
+  max-width: 140px;
+  margin-bottom: 32px;
+}
