@@ -1,17 +1,10 @@
-# Hello World Webapp (React/Redux with Material Design)
+# Hello World Webapp (React/Redux)
 
 ![pipeline status](https://gitlab.com/helloworld-nt/helloworld-react/badges/master/pipeline.svg)
 ![coverage report](https://gitlab.com/helloworld-nt/helloworld-react/badges/master/coverage.svg)
 ![dependencies](https://img.shields.io/david/naderio/helloworld-react.svg)
 
-A boilerplate and reference implementation for web applications built with React, Redux, and React Material.
-
-## Preview
-
-- http://react.helloworld.nader.tech
-- Access credentials:
-  - email: `user@helloworld.nader.tech`
-  - password: `password`
+A boilerplate for web applications built with React and Redux.
 
 ## Technology
 
@@ -30,7 +23,7 @@ A boilerplate and reference implementation for web applications built with React
 npm install
 
 # run app in development on port 3000
-npm start
+npm run dev
 
 # run tests
 npm run test

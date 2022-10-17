@@ -53,7 +53,12 @@ function Session() {
   const doLogout = React.useCallback(() => {
     dispatch(logout())
       .then(() => Interaction.toast({ type: Interaction.SUCCESS, content: 'Goodbye!' }))
-      .catch((error) => Interaction.toast({ type: Interaction.FAILURE, content: error.message }));
+      .catch((error) =>
+        Interaction.toast({
+          type: Interaction.FAILURE,
+          content: error.message,
+        }),
+      );
   }, [dispatch]);
 
   const openNavigationMenuDrawer = React.useCallback(() => setNavigationMenuDrawerOpen(true), []);

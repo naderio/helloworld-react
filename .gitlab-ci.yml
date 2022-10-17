@@ -59,30 +59,3 @@ build:
 #     - deploy:helloworld
 #   script:
 #     - ./scripts/deploy.sh ./dist/
-
-# deploy:
-#   stage: deploy
-#   dependencies:
-#     - build
-#   only:
-#     - master
-#   tags:
-#     - docker
-#   image: emiketic/essentials
-#   script:
-#     - ./scripts/deploy.sh ./dist/
-
-deploy:
-  stage: deploy
-  dependencies:
-    - build
-  only:
-    - master
-  tags:
-    - docker
-  image: node:14
-  script:
-    - npm install -g firebase-tools
-    - firebase --token $FIREBASE_TOKEN use $FIREBASE_PROJECT_ID
-    - firebase --token $FIREBASE_TOKEN target:apply hosting default $FIREBASE_PROJECT_ID-react
-    - firebase --token $FIREBASE_TOKEN deploy -m "build $CI_COMMIT_REF_NAME / $CI_COMMIT_SHORT_SHA" --non-interactive
